@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --foreground-rgb: #020202;
+  --background-start-rgb: #0202020;
   --background-end-rgb: 255, 255, 255;
 }
 
@@ -18,16 +18,40 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: var(--foreground-rgb);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.ImageOuterContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+  width: 800px;
+  border-radius: 50%;
+  border: 15px solid #00C1FE;
+  box-shadow: 0px 0px 15px 10px #00C1FE;
+}
+
+.ImageContainer {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  border: 15px solid #00C1FE;
+  background: transparent;
+  box-shadow: 0px 0px 15px 10px #00C1FE;
+}
+
+.Image {
+  height: 100%;
+  width: auto;
+  filter: grayscale(100%);
 }
