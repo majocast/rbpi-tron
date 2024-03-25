@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import Image, { StaticImageData } from 'next/image';
+import "./CenterImage.scss"; 
 
 interface CenterImageProps {
 	img: string | StaticImageData;
@@ -9,7 +10,7 @@ interface CenterImageProps {
 export default function CenterImage(props: CenterImageProps): ReactElement {
 	return <section className="ImageOuterContainer">
 		<div className="ImageContainer">
-			<Image src={props.img} alt={props.alt} className="Image"/>
+			<Image src={props.img} alt={props.alt} className="Image" />
 		</div>
 	</section>
 }
